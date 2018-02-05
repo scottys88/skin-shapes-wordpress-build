@@ -6197,7 +6197,7 @@ img {
 }
 
 
-.price {
+.product-container .price {
 	color: #000;
 	font-size: 200%;
 	position: relative;
@@ -6224,3 +6224,29 @@ a.image-link:hover {
 	color: #000;
 	text-decoration: none;
 }
+
+.woo-page-description {
+	text-align: center;
+}
+
+.sort-by-drop-down {
+	text-align: center;
+	display: none;
+}
+
+/* Single Product Page */
+.single-product-description-heading {
+	display: none;
+}
+
+.product-details-box {
+	
+}
+
+.entry-title, .single-product-description-heading, .product-details-box p{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin-left: 50px;
+}
+

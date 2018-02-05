@@ -4,7 +4,7 @@
 
 
 			<div class="row sub-hero-area">
-				<div class="col-xs-12 sub-hero-heading col-md-12"><h1><?php the_title() ?></h1></div>
+				<div class="col-xs-12 sub-hero-heading col-md-12"><h1><?php woocommerce_page_title(); ?></h1></div>
 			</div>
 			
 				

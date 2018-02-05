@@ -19,6 +19,7 @@
 					<li class="header-link"><a href="about">About</a></li>
 					<li class="header-link"><a href="shop">Shop</a></li>
 					<li class="header-link"><a href="contact">Contact</a></li>
+					<li class="header-link"><a>Cart</a></li>
 				</ul>
 			</div>
 

@@ -339,6 +339,7 @@ function wc_product_post_class( $classes, $class = '', $post_id = '' ) {
 
 	if ( $product ) {
 		$classes[] = 'product';
+		$classes[] = 'row';
 		$classes[] = wc_get_loop_class();
 		$classes[] = $product->get_stock_status();
 
@@ -448,7 +449,7 @@ if ( ! function_exists( 'woocommerce_content' ) ) {
 
 		} else { ?>
 
-			<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+			<?php if ( apply_filters( 'woocommerce_show_page_title', false ) ) : ?>
 
 				<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
 
@@ -708,7 +709,7 @@ if ( ! function_exists( 'woocommerce_product_archive_description' ) ) {
 			if ( $shop_page ) {
 				$description = wc_format_content( $shop_page->post_content );
 				if ( $description ) {
-					echo '<div class="page-description">' . $description . '</div>'; // WPCS: XSS ok.
+					echo '<div class="woo-page-description">' . $description . '</div>'; // WPCS: XSS ok.
 				}
 			}
 		}
