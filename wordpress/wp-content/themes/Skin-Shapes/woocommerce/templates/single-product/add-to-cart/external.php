@@ -1,8 +1,8 @@
 <?php
 /**
- * Single Product Sale Flash
+ * External product add to cart
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/sale-flash.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/single-product/add-to-cart/external.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -13,20 +13,16 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     1.6.4
+ * @version     2.1.0
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit;
 }
 
-global $post, $product;
+do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-?>
-<?php if ( $product->is_on_sale() ) : ?>
+<p class="cart">
+	<a href="<?php echo esc_url( $product_url ); ?>" rel="nofollow" class="single_add_to_cart_button btn btn-primary primary-btn-override"><?php echo esc_html( $button_text ); ?></a>
+</p>
 
-	<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="skin-shapes-sale single-product">' . esc_html__( 'Sale!', 'woocommerce' ) . '</span>', $post, $product ); ?>
-
-<?php endif;
-
-/* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */
+<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>

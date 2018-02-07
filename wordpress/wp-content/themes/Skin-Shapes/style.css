@@ -6243,10 +6243,34 @@ a.image-link:hover {
 	
 }
 
-.entry-title, .single-product-description-heading, .product-details-box p{
+.product-details-box {
 	position: relative;
 	text-align: center;
-	width: 100%;
-	margin-left: 50px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
+.skin-shapes-qty-input {
+	margin: 15px auto;
+	font-size: 120%;
+}
+
+.skin-shapes-variations {
+	margin: auto;
+	font-size: 150%;
+}
+
+.skin-shapes-variations .label {
+	padding-right: 15px;
+}
+
+.skin-shapes-quantity-label {
+	overflow: visible;
+	height: auto;
+	font-size: 150%;
+	padding-right: 15px;
+}
+
+.skin-shapes-sale {
+	color: red;
+}
