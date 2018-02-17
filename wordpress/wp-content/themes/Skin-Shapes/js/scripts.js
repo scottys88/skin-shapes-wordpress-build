@@ -1,4 +1,5 @@
 //Mobile menu open/ close and chaning the button
+$(document).ready(function(){
 $('.mobile-menu-toggle').click(function() {
 	var $mobileMenu = $('.mobile-menu');
 	var $menuToggle = $('.menuButton i');
@@ -21,12 +22,8 @@ $('.mobile-menu-toggle').click(function() {
 		}
 							   
 	
-});
+})});
 
-var a = "scott";
-$(document).ready(function(){
-	console.log('eat shit');
-});
 
 //Slider carousel
 $(document).ready(function(){
@@ -54,15 +51,16 @@ $(document).ready(function(){
         dots: false,
       }
 	}]
-  });
+  })
 });
+
 
 //script to bring in instagram feed
 
  var bigfeed = new Instafeed({
         get: 'user',
-	 	get: 'tagged',
-	 	tagName: 'shop',
+	 	//get: 'tagged',
+	 	//tagName: 'shop',
 	 	userId: '3293670556',
 	 	target: 'slider-container',
 	 	clientId: 'f144b7bbf1414833a1f523eea96f9329',
@@ -96,8 +94,57 @@ $(document).ready(function(){
 				}]
 			  });
 			}
-});
+ 		})
+ 	bigfeed.run();
+
+ 	
+
+
     
     
 
-bigfeed.run();
+
+
+//function for WooCommerce checkout to show and hide shipping details
+
+$(document).ready(function(){
+if (typeof document.getElementById("skin-shapes-alt-ship") !== 'undefined') { 
+	
+var altShipAdd = document.getElementById('alt-ship-add');
+var checkbox = document.getElementById("skin-shapes-alt-ship");
+
+	
+	
+
+
+
+checkbox.addEventListener( 'change', function() {
+	console.log(checkbox.length);
+	shippingFields = document.getElementsByClassName('shipping_address');
+    		
+		
+		if (this.classList.contains('unchecked')){
+			this.classList.remove('unchecked');
+			this.classList.add('checked');
+			if (altShipAdd.classList.contains('hidden')){
+				altShipAdd.classList.remove('hidden');
+				altShipAdd.classList.add('visible');
+			}
+		}
+     
+		else {
+        // Checkbox is not checked..
+			if (this.classList.contains('checked')){
+				this.classList.remove('checked');
+				this.classList.add('unchecked');
+				if (altShipAdd.classList.contains('visible')){
+					altShipAdd.classList.remove('visible');
+					altShipAdd.classList.add('hidden');
+    		}
+		}
+	}
+						 
+})}});
+	
+	
+	

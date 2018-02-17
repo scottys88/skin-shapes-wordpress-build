@@ -77,31 +77,7 @@
 			</div>
 			<div class="row contact-form">
 				<div class="col-md-6 offset-md-3">
-					<form class="home-contact">
-						<div class="form-group">
-							<label for="input-first-name">First Name</label>
-							<input type="text" id="input-first-name" class="form-control">
-						</div>
-						<div class="form-group">
-							<label for="input-last-name">Last Name</label>
-							<input type="text" id="input-last-name" class="form-control">
-						</div>
-						<div class="form-group">
-							<label for="input-email">Email</label>
-							<input type="email" id="input-email" class="form-control">
-						</div>
-						<div class="form-group">
-							<label for="input-feedback-box">Your feedback</label>
-							<textarea class="form-control" id="input-feedback-box" rows="5"></textarea>
-						</div>
-						<div class="form-check">
-							<label class="form-check-label">
-								<input class="form-check-input big-checkbox" type="checkbox" value="">
-								&nbsp; &nbsp; Sign up for the Skin Shapes newsletter
-							</label>
-						</div>
-						<button type="submit" class="btn btn-primary primary-btn-override form-submit">Let us know!</button>
-					</form>
+					<?php the_field('contact_form_area'); ?>
 				</div>
 			</div>
 	<?php endwhile; ?>

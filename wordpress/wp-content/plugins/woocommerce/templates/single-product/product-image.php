@@ -33,7 +33,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<div class="col-md-6 <?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 1;">
+<div class="col-md-6 product-details-image<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 1;">
 	<figure class="woocommerce-product-gallery__wrapper">
 		<?php
 		$attributes = array(

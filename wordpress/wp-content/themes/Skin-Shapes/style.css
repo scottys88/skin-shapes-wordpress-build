@@ -6003,7 +6003,9 @@ h3, h4 {
         margin-bottom: 200px; } }
 
 body {
-  font-family: 'Amatic SC', cursive; }
+  font-family: 'Amatic SC', cursive;
+  overflow-x: hidden;
+}
 
 .shop-bg, .about-bg, .contact-bg {
   background-image: url("http://localhost:8080/skin-shapes-wordpress/wordpress/wp-content/themes/skin-shapes/images/skin-shapes-bg-2.png");
@@ -6182,7 +6184,7 @@ img {
           width: 50%; } }
 
 
-/************************ WooCommerce Styling ********************************/
+/************ WooCommerce Styling ********************************/
 
 /* Product Archive Page */
 
@@ -6191,11 +6193,28 @@ img {
 	color: #000;
 }
 
+@media (max-width: 375px){
+.skin-shapes-sale {
+	padding: 15px;
+	}
+}
+
+@media (max-width: 375px){
+.product-title {
+	padding: 15px;
+	}
+}
+
 .skin-shapes-sale:hover {
 	color: #000;
 	text-decoration-color: #000;
 }
 
+@media (max-width: 375px) {
+	img.product-image {
+		height: auto;
+	}
+}
 
 .product-container .price {
 	color: #000;
@@ -6213,7 +6232,12 @@ img {
 	margin-top: 25px;
 	margin-bottom: 25px;
 	display: block;
-	
+}
+
+@media (max-width: 375px){
+	.btn-add-to-cart {
+		bottom: 15px;
+	}
 }
 
 .product-description {
@@ -6239,8 +6263,22 @@ a.image-link:hover {
 	display: none;
 }
 
-.product-details-box {
-	
+@media (min-width: 768px) {
+.product-details-images {
+	padding: 50px 15px 50px 50px;
+	}
+}
+
+@media (max-width: 375px) {
+	.product-details-images {
+		padding: 0 0 0 0;
+	}
+}
+
+@media (max-width: 375px) {
+	.product-details-images img {
+		width: auto;
+	}
 }
 
 .product-details-box {
@@ -6248,6 +6286,26 @@ a.image-link:hover {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 50px;
+}
+@media (max-width: 375px) {
+	button[name="add-to-cart"] {
+		margin-bottom: 15px;
+	}	
+}
+
+@media (max-width: 375px) {
+	.product-details-box {
+		margin-top: 0;
+		padding-top: 15px;
+	}
+}
+
+@media (max-width: 375px) {
+	h1.product_title {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
 .skin-shapes-qty-input {
@@ -6273,4 +6331,49 @@ a.image-link:hover {
 
 .skin-shapes-sale {
 	color: red;
+}
+
+@media (max-width: 375px) {
+.product-column {
+	padding: 5px 50px 5px 50px;
+	}
+}
+@media (min-width: 768px) {
+.product-column {
+	padding: 50px;
+	}
+}
+
+.product {
+	background-color: #EFEFEF;
+}
+
+/*********************Checkout Page******************/
+
+.shipping_address.hidden {
+	display: none;
+}
+
+.shipping_address.visible {
+	display: visible;
+}
+
+.woocommerce {
+	font-size: 150%;
+}
+
+.woocommerce-checkout {
+	font-size: 80%;
+}
+
+/****************WP FORMS**************************/
+
+.contact-form label {
+	position: relative;
+	width: 100%;
+}
+
+.contact-form label input, .contact-form label textarea {
+	position: relative;
+	width: 100%;
 }
